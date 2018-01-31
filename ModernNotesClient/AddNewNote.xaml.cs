@@ -33,7 +33,7 @@ namespace ModernNotesClient
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
+        {//
             var note = new NoteRequest(textBox.Text);
 
             var isSaved = new ModernNotesClientController().PostNewNote(note);
