@@ -9,7 +9,7 @@ using System.Linq;
 namespace ModernNotesClient.IntegrationTests
 {
     [TestClass]
-    public class GUIControllerTests
+    public class ModernNotesClientControllerTests
     {
         [TestMethod]
         public void Post()
@@ -38,7 +38,7 @@ namespace ModernNotesClient.IntegrationTests
         {
             // arrange
             var note = new NoteRequest("A note.");
-            var controller = new ModernNotesClientController();
+            var controller = new Controller.ModernNotesClientController();
             bool responseFromPost = controller.PostNewNote(note); // If database is empty.
 
             // act
@@ -56,7 +56,7 @@ namespace ModernNotesClient.IntegrationTests
             var note = new NoteRequest("A note.");
             var assertNoteTextAfterUpdate = "Update";
 
-            var controller = new ModernNotesClientController();
+            var controller = new Controller.ModernNotesClientController();
             bool responseFromPost = controller.PostNewNote(note); // If database is empty.
             List<Note> getAllNotesBeforeUpdate = controller.GetNotes();
 
@@ -82,7 +82,7 @@ namespace ModernNotesClient.IntegrationTests
             // arrange
             var note = new NoteRequest("A note.");
 
-            var controller = new ModernNotesClientController();
+            var controller = new Controller.ModernNotesClientController();
             bool responseFromPost = controller.PostNewNote(note); // If database is empty.
 
             List<Note> allNotesBeforeDelete = controller.GetNotes();
