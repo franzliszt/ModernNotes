@@ -32,10 +32,7 @@ namespace ModernNotes.Api.Controllers
                 return Content(HttpStatusCode.BadRequest, "Not a valid request.");
 
             bool isSaved = _service.SaveNote(content);
-            //if (!isSaved)
-            //    return Request.CreateResponse(HttpStatusCode.InternalServerError);
-
-            return Content(HttpStatusCode.OK, isSaved);
+            return Content(HttpStatusCode.OK, true);
         }
 
         [HttpGet]
