@@ -6,17 +6,39 @@
       xmlns:local="clr-namespace:ModernNotesClient"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="500"
-      Title="AddNewNote">
+      Title="Add New Note">
+
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#444444" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Height" Value="200" />
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="AcceptsReturn" Value="True" />
+            <Setter Property="VerticalScrollBarVisibility" Value="Visible" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BorderBrush" Value="#222222"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Width" Value="90" />
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+    </Page.Resources>
 
     <Grid VerticalAlignment="Center">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="178" Margin="10,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380"
                  AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
         <Button x:Name="SaveButton" Content="Save Note" HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top" Width="75" Height="34" Click="SaveButton_Click"/>
         <Button x:Name="ClearButton" Content="Clear Note" HorizontalAlignment="Left" Margin="104,242,0,0" VerticalAlignment="Top" Width="75" Height="34" Click="ClearButton_Click"/>
-        <Label x:Name="label" Content="Write new note" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.526,1.574"/>
-        <Label x:Name="ErrorLabel" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="169" Height="32"/>
         <Button x:Name="AllNotesButton" Content="View All Notes" HorizontalAlignment="Left" Margin="263,242,0,0" VerticalAlignment="Top" Width="127" Height="34" Click="AllNotesButton_Click"/>
-        <Label x:Name="resultLabel"  HorizontalAlignment="Left" Margin="15,293,0,0" VerticalAlignment="Top" Width="115"/>
 
+        <Label x:Name="label" Content="New note" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.526,1.574"/>
     </Grid>
 </Page>
